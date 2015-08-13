@@ -1,5 +1,6 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
@@ -23,5 +24,14 @@
         description="Post install import step from collective.subsections"
         handler=".setuphandlers.post_install">
     </genericsetup:importStep>
+
+    <browser:viewlet
+      name="plone.global_sections"
+      manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
+      template="subsections.pt"
+      class=".common.GlobalSubSectionsViewlet"
+      layer="collective.subsections.interfaces.ICollectiveSubsectionsLayer"
+      permission="zope2.View"
+     />
 
 </configure>
