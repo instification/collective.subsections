@@ -27,7 +27,7 @@
 
     <browser:viewlet
       name="plone.global_sections"
-      manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHeadLinks"
       template="subsections.pt"
       class=".common.GlobalSubSectionsViewlet"
       layer="collective.subsections.interfaces.ICollectiveSubsectionsLayer"
